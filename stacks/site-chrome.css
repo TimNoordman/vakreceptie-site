@@ -172,3 +172,48 @@ a[class*="bg-primary"],
   color: var(--accentInk) !important;
   border-color: var(--accent) !important;
 }
+
+/* Extra stack-detail */
+.stack-page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 28px max(16px, env(safe-area-inset-left, 0px)) 72px;
+}
+.stack-page .crumbs {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 0 0 16px;
+}
+.stack-page .crumbs a { color: inherit; }
+.stack-page .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.stack-page .chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+.stack-page .chip.outline { background: transparent; }
+.stack-page .chip.accent {
+  background: var(--accent);
+  color: var(--accentInk);
+  border-color: var(--accent);
+}
+.stack-page .kicker { color: var(--muted); margin: 10px 0 0; }
+.stack-page .lede { max-width: 42rem; margin: 18px 0 0; }
+.stack-page .stack-tools { list-style: none; padding: 0; margin: 22px 0 0; max-width: 28rem; }
+.stack-page .stack-tools li { display: flex; gap: 12px; padding: 6px 0; }
+.stack-page .stack-tools li span:first-child { width: 7.5rem; flex-shrink: 0; color: var(--muted); }
+.stack-page .size-note { color: var(--muted); font-size: 14px; margin-top: 18px; }
+.stack-page .source { margin-top: 18px; }
+.stack-page .source a { color: var(--accent); font-weight: 600; }
+.stack-foot {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 max(16px, env(safe-area-inset-left, 0px)) 32px;
+  color: var(--muted);
+  font-size: 13px;
+}
