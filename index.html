@@ -345,8 +345,13 @@ footer .w{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between
 @media (max-width:1060px){.gxgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.gxgrid{grid-template-columns:minmax(0,1fr)}.grbundle{grid-template-columns:minmax(0,1fr)}.grbp{align-items:flex-start;text-align:left}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+
+/* mobiel menu */
+.nav-toggle{display:none;margin-left:auto;width:44px;height:44px;padding:0;border:2px solid var(--ink);background:transparent;border-radius:10px;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;flex-shrink:0}
+.nav-toggle span{display:block;width:18px;height:2px;background:var(--ink)}
+@media (max-width:560px){nav .nav-toggle{display:inline-flex}nav .w{flex-wrap:wrap}nav.is-open .navlink{display:block}nav.is-open .btn{display:inline-flex}nav.is-open .navlink,nav.is-open .btn{flex:1 0 100%;width:100%;box-sizing:border-box}}
 </style>
-</head>
+<script src="/stacks/site-nav.js" defer></script></head>
 <body>
 
 <nav><div class="w">

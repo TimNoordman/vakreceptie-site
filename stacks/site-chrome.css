@@ -158,10 +158,44 @@ footer .max-w-5xl {
   color: var(--accentInk);
 }
 
+.nav-toggle {
+  display: none;
+  margin-left: auto;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 2px solid var(--ink) !important;
+  background: transparent !important;
+  color: var(--ink) !important;
+  border-radius: 10px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  flex-shrink: 0;
+}
+.nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--ink);
+}
 @media (max-width: 560px) {
   .vr-nav .logo img { height: 44px; }
-  .vr-nav .nav-home { display: none; }
-  .vr-nav .btn { display: none; }
+  .vr-nav .w { flex-wrap: wrap; }
+  .vr-nav .nav-toggle { display: inline-flex; }
+  .vr-nav .navlink,
+  .vr-nav .btn { display: none !important; }
+  .vr-nav.is-open .navlink { display: block !important; }
+  .vr-nav.is-open .btn { display: inline-flex !important; }
+  .vr-nav.is-open .navlink,
+  .vr-nav.is-open .btn {
+    flex: 1 0 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 0;
+  }
 }
 
 /* Knoppen en kaarten in homepage-stijl */
