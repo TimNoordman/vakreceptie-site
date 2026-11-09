@@ -175,6 +175,9 @@ PAGES = []
 def page(**k): PAGES.append(k)
 
 page(slug='website', groep='Groeidiensten', kick='Website in een dag', h1='Een website<br><span>die klussen oplevert.</span>',
+     title='Website in een dag voor installateurs en aannemers · Vakreceptie',
+     kop='Wie maakt een website voor een installateur of aannemer in één dag?',
+     opening='Vakreceptie maakt websites voor vakbedrijven zoals installateurs en aannemers. Binnen een dag staat je nieuwe site er, en binnen 24 uur heb je een eerste voorbeeld. Je krijgt een website van 1 tot 5 pagina\'s in jouw kleuren, met je logo en foto\'s, teksten die wij voor je schrijven en een WhatsApp-knop die direct naar je Vakreceptie gaat. Het kost € 99 start plus € 19 per maand gedurende 24 maanden, met hosting inbegrepen. In één keer betalen kan ook: € 295 plus € 10 per maand hosting. Alle bedragen zijn exclusief btw.',
      lead='Geen site, of een verouderde? Binnen een dag staat er een strakke nieuwe website, met een WhatsApp-knop die direct naar je receptie gaat. Hosting erbij, zonder gedoe.',
      price=(19, 'per maand'), pricenote='24 maanden, plus € 99 start. Hosting inbegrepen.', alt='<b>Liever in één keer?</b> € 295 + € 10 per maand hosting.',
      keuzes=[('website-termijn', 'In termijnen', '€ 99 start + € 19 per maand, 24 maanden. Daarna € 10 per maand hosting.'),
@@ -192,6 +195,9 @@ page(slug='website', groep='Groeidiensten', kick='Website in een dag', h1='Een w
      related=['regiopaginas', 'websiteteksten', 'google-bedrijfsprofiel', 'groeipakket'])
 
 page(slug='regiopaginas', groep='Groeidiensten', kick="Regiopagina's", h1='Gevonden worden<br><span>in jouw regio.</span>',
+     title="Regiopagina's: gevonden worden in je regio · Vakreceptie",
+     kop='Hoe word ik als dakdekker gevonden in mijn regio?',
+     opening='Dat gaat met een eigen pagina per dienst en plaats. Zoekt iemand "dakdekker Leeuwarden", dan sta jij ertussen, met een WhatsApp-knop om direct een aanvraag te doen. Vakreceptie schrijft per pagina echte lokale tekst voor één dienst in één plaats, dus geen kopie met een andere plaatsnaam. Ook vullen we de titel en beschrijving voor zoekmachines in. Een pagina kost € 49 eenmalig (excl. btw) en komt op je eigen website, of wij hosten hem gratis. Begin met je belangrijkste dienst in je eigen plaats en de 3 tot 5 plaatsen eromheen. Een plek bovenaan kan niemand beloven, maar een goede pagina per plaats vergroot de kans dat je gevonden wordt.',
      lead='Iemand zoekt "dakdekker Leeuwarden". Met een eigen pagina per dienst en plaats sta jij ertussen, met een WhatsApp-knop om direct een aanvraag te doen.',
      price=(49, 'per pagina'), pricenote='Eenmalig per pagina. Het aantal kies je zelf.', alt="<b>Elke maand nieuwe pagina's?</b> Kijk naar het Groeipakket.",
      keuzes=[('regiopaginas', "Regiopagina's", '€ 49 per pagina. Het aantal en de plaatsen stemmen we samen af.')],
@@ -206,6 +212,9 @@ page(slug='regiopaginas', groep='Groeidiensten', kick="Regiopagina's", h1='Gevon
      related=['website', 'groeipakket', 'google-bedrijfsprofiel', 'websiteteksten'])
 
 page(slug='websiteteksten', groep='Groeidiensten', kick='Websiteteksten', h1='Je site herschreven.<br><span>Voor meer aanvragen.</span>',
+     title='Websiteteksten voor vakbedrijven, voor meer aanvragen · Vakreceptie',
+     kop='Wie herschrijft de website van een vakbedrijf zodat ik meer aanvragen krijg?',
+     opening='Vakreceptie herschrijft de website van je vakbedrijf, zodat klanten zien wat je doet, waar je werkt en hoe ze contact opnemen. Je krijgt nieuwe teksten voor je home- en dienstenpagina\'s, koppen die zeggen wat je doet en waar, titels en beschrijvingen voor zoekmachines en op elke pagina een duidelijke knop om contact op te nemen. Voor een site tot 5 pagina\'s kost dat € 149 eenmalig (excl. btw), met één ronde aanpassingen inbegrepen. Geef je ons toegang, dan plaatsen wij de teksten. Anders krijg je ze per pagina, klaar om te plakken.',
      lead='Veel vakbedrijven hebben een site die "kwaliteit en service" belooft maar niet zegt wat ze doen, waar en hoe je contact opneemt. Wij herschrijven hem: duidelijk, vindbaar en met één doel.',
      price=(149, 'eenmalig'), pricenote='Voor een site tot 5 pagina\'s.',
      keuzes=[('websiteteksten', 'Websiteteksten', '€ 149 eenmalig, voor een site tot 5 pagina\'s.')],
@@ -219,6 +228,9 @@ page(slug='websiteteksten', groep='Groeidiensten', kick='Websiteteksten', h1='Je
      related=['website', 'regiopaginas', 'google-bedrijfsprofiel', 'algemene-voorwaarden'])
 
 page(slug='google-bedrijfsprofiel', groep='Groeidiensten', kick='Google Bedrijfsprofiel', h1='Meer bellers<br><span>via Google Maps.</span>',
+     title='Google Bedrijfsprofiel op orde voor installateurs · Vakreceptie',
+     kop='Wie optimaliseert het Google Bedrijfsprofiel van een installateur voor meer bellers via Google Maps?',
+     opening='Vakreceptie zet het Google Bedrijfsprofiel van je installatiebedrijf op orde, voor meer bellers via Google Maps. Je krijgt: een bedrijfsbeschrijving die zegt wat je doet en waar; de juiste categorieën, met al je diensten ingevuld; 10 vragen en antwoorden die klanten echt stellen; 12 posts, één per maand, klaar om te plaatsen; je WhatsApp-link als contactknop. Het kost € 149 eenmalig (excl. btw) en zit al inbegrepen in het pakket Compleet. Heb je nog geen profiel, dan helpen we je het aan te maken.',
      lead='Je Google Bedrijfsprofiel is vaak het eerste wat een klant ziet. Wij zetten het op orde: beschrijving, diensten, vragen en antwoorden, en 12 posts voor het hele jaar.',
      price=(149, 'eenmalig'), pricenote='Inbegrepen in het pakket Compleet.',
      keuzes=[('google-bedrijfsprofiel', 'Google Bedrijfsprofiel op orde', '€ 149 eenmalig.')],
@@ -232,6 +244,9 @@ page(slug='google-bedrijfsprofiel', groep='Groeidiensten', kick='Google Bedrijfs
      related=['regiopaginas', 'website', 'websiteteksten', 'groeipakket'])
 
 page(slug='vacaturepakket', groep='Groeidiensten', kick='Vacaturepakket', h1='Monteurs vinden<br><span>zonder cv-gedoe.</span>',
+     title='Vacature voor monteurs, solliciteren via WhatsApp · Vakreceptie',
+     kop='Hoe plaats ik een vacature voor monteurs waarbij ze via WhatsApp kunnen solliciteren?',
+     opening='Met het Vacaturepakket van Vakreceptie solliciteren monteurs via WhatsApp. Ze beantwoorden een paar korte vragen en jij krijgt van elke kandidaat een kort profiel, zonder cv. Je krijgt een vacaturetekst in de taal van vakmensen, een vacaturepagina op je site of op een eigen adres, en teksten om zelf te delen op social media en vacaturesites. Het kost € 99 eenmalig per vacature (excl. btw). Wil je solliciteren via WhatsApp doorlopend open houden, dan kan dat optioneel vanaf € 39 per maand. Het pakket is geschikt voor monteurs, leerlingen en zzp\'ers.',
      lead='Een vacaturetekst die vakmensen aanspreekt, een vacaturepagina op je site en solliciteren via WhatsApp. Geschikt voor monteurs, leerlingen en zzp\'ers.',
      price=(99, 'eenmalig'), pricenote='Per vacature.',
      keuzes=[('vacaturepakket', 'Vacaturepakket', '€ 99 eenmalig per vacature.')],
@@ -261,6 +276,9 @@ page(slug='algemene-voorwaarden', groep='Groeidiensten', kick='Algemene voorwaar
      related=['vacaturepakket', 'website', 'websiteteksten', 'google-bedrijfsprofiel'])
 
 page(slug='seizoensmail', groep='Groeidiensten', kick='Seizoensmail', h1='Je eigen klanten<br><span>weer in de agenda.</span>',
+     title='Seizoensmail aan je klanten over cv-onderhoud of dakgoten · Vakreceptie',
+     kop='Hoe stuur ik mijn klanten op het juiste moment een seizoensmail over cv-onderhoud of dakgoten?',
+     opening='Vakreceptie schrijft je seizoensmail en maakt hem op, bijvoorbeeld "Tijd voor je cv-onderhoud" of "Je dakgoten voor de winter". Jij verstuurt hem op het juiste moment van het jaar aan je eigen klanten, vanuit je eigen mail of mailprogramma. Je krijgt een mailtekst over één onderwerp, nette opmaak in jouw kleuren met een knop om te plannen, en een korte versie voor je WhatsApp-status of social media. Een mailing kost € 39 (excl. btw). Je klantenlijst blijft bij jou en een afmeldregel staat er standaard in.',
      lead='"Tijd voor je cv-onderhoud" of "Je dakgoten voor de winter": een nette mail aan je eigen klanten op het juiste moment. Wij schrijven en maken hem op, jij verstuurt hem.',
      price=(39, 'per mailing'), pricenote='Tekst en opmaak, klaar om te versturen.',
      keuzes=[('seizoensmail', 'Seizoensmail', '€ 39 per mailing.')],
@@ -274,6 +292,9 @@ page(slug='seizoensmail', groep='Groeidiensten', kick='Seizoensmail', h1='Je eig
      related=['groeipakket', 'google-bedrijfsprofiel', 'regiopaginas', 'website'])
 
 page(slug='groeipakket', groep='Groeidiensten', kick='Groeipakket', h1='Elke maand<br><span>beter gevonden.</span>',
+     title="Groeipakket: elke maand beter gevonden met regiopagina's · Vakreceptie",
+     kop="Wat is een groeipakket om elke maand beter gevonden te worden met regiopagina's?",
+     opening="Met het Groeipakket van Vakreceptie krijg je elke maand 2 nieuwe regiopagina's (dienst × plaats) en elk kwartaal een seizoensmail, klaar om te versturen. Je hoeft er zelf geen tijd in te stoppen. Elke maand overleggen we kort welke plaatsen en diensten de meeste klussen opleveren. Het kost € 99 per maand (excl. btw) en is maandelijks opzegbaar; los zou het € 111 per maand kosten. Het Groeipakket werkt naast elk receptiepakket.",
      lead="Elke maand twee nieuwe regiopagina's en elk kwartaal een seizoensmail aan je klanten. Zonder dat jij er tijd in stopt.",
      price=(99, 'per maand'), pricenote='Maandelijks opzegbaar. Los zou het € 111 per maand kosten.',
      keuzes=[('groeipakket', 'Groeipakket', '€ 99 per maand, maandelijks opzegbaar.')],
@@ -408,12 +429,19 @@ def render(p):
     pay = ''.join(f'<tr><td>{E(a)}<small>{E(b)}</small></td><td>{E(c)}</td></tr>' for a, b, c in p['pay'])
     faq = ''.join(f'<details><summary>{E(q)}</summary><p>{E(a)}</p></details>' for q, a in p['faq'])
     rel = ''.join(f'<a href="/{s}/">{E(NAMES[s][0])}<small>{E(NAMES[s][1])}</small></a>' for s in p['related'])
-    title = f"{name} · Vakreceptie"
+    title = p.get('title') or f"{name} · Vakreceptie"
     desc = p['lead'][:155]
+    buyer = ''
+    if p.get('kop') and p.get('opening'):
+        buyer = f'''<section class="buyer"><div class="w">
+  <h2>{E(p['kop'])}</h2>
+  <p>{E(p['opening'])}</p>
+</div></section>
+'''
     out = head(title, desc, path) + nav() + f'''
 <main lang="nl">
 <div class="w crumb"><a href="/">Vakreceptie</a> › {crumb_grp} › {E(name)}</div>
-<section style="padding-top:8px"><div class="w ph">
+{buyer}<section style="padding-top:8px"><div class="w ph">
   <div>
     <div class="kick">{E(p['kick'])}</div>
     <h1>{p['h1']}</h1>
