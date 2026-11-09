@@ -166,3 +166,8 @@ form.aanmeld input:focus,form.aanmeld select:focus,form.aanmeld textarea:focus{o
 @media (max-width:560px){.navlink{display:none}.site-hero b{font-size:26px}}
 .site-hero b{overflow-wrap:anywhere}
 .ph h1{font-size:clamp(36px,10.5vw,80px);overflow-wrap:break-word}
+
+/* mobiel menu (gelijk aan homepage) */
+.nav-toggle{display:none;margin-left:auto;width:44px;height:44px;padding:0;border:2px solid var(--ink);background:transparent;color:var(--ink);border-radius:10px;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;flex-shrink:0}
+.nav-toggle span{display:block;width:18px;height:2px;background:var(--ink)}
+@media (max-width:560px){nav .nav-toggle{display:inline-flex}nav .w{flex-wrap:wrap}nav.is-open .navlink{display:block}nav.is-open .btn{display:inline-flex}nav.is-open .navlink,nav.is-open .btn{flex:1 0 100%;width:100%;box-sizing:border-box;padding:12px 0}}

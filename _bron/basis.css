@@ -43,3 +43,8 @@ nav .w{display:flex;align-items:center;gap:14px;padding-block:10px}
 .navlink{font-weight:600;text-decoration:none;font-size:16px}
 footer{border-top:1px solid var(--line);padding-block:28px 48px;font-size:14.5px;color:var(--muted)}
 footer .w{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+/* mobiel menu (gelijk aan homepage) */
+.nav-toggle{display:none;margin-left:auto;width:44px;height:44px;padding:0;border:2px solid var(--ink);background:transparent;color:var(--ink);border-radius:10px;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;flex-shrink:0}
+.nav-toggle span{display:block;width:18px;height:2px;background:var(--ink)}
+@media (max-width:560px){nav .nav-toggle{display:inline-flex}nav .w{flex-wrap:wrap}nav.is-open .navlink{display:block}nav.is-open .btn{display:inline-flex}nav.is-open .navlink,nav.is-open .btn{flex:1 0 100%;width:100%;box-sizing:border-box;padding:12px 0}}
