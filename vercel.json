@@ -2,34 +2,55 @@
   "redirects": [
     {
       "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "vakreceptie-site.vercel.app"
-        }
-      ],
+      "has": [{ "type": "host", "value": "vakreceptie-site.vercel.app" }],
       "destination": "https://vakreceptie.nl/",
       "statusCode": 301
     },
     {
       "source": "/:path*/",
-      "has": [
-        {
-          "type": "host",
-          "value": "vakreceptie-site.vercel.app"
-        }
-      ],
+      "has": [{ "type": "host", "value": "vakreceptie-site.vercel.app" }],
       "destination": "https://vakreceptie.nl/:path*/",
       "statusCode": 301
     },
     {
       "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "vakreceptie-site.vercel.app"
-        }
-      ],
+      "has": [{ "type": "host", "value": "vakreceptie-site.vercel.app" }],
+      "destination": "https://vakreceptie.nl/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "vakreceptie-site-stone-member.vercel.app" }],
+      "destination": "https://vakreceptie.nl/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*/",
+      "has": [{ "type": "host", "value": "vakreceptie-site-stone-member.vercel.app" }],
+      "destination": "https://vakreceptie.nl/:path*/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "vakreceptie-site-stone-member.vercel.app" }],
+      "destination": "https://vakreceptie.nl/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "vakreceptie-site-git-main-stone-member.vercel.app" }],
+      "destination": "https://vakreceptie.nl/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*/",
+      "has": [{ "type": "host", "value": "vakreceptie-site-git-main-stone-member.vercel.app" }],
+      "destination": "https://vakreceptie.nl/:path*/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "vakreceptie-site-git-main-stone-member.vercel.app" }],
       "destination": "https://vakreceptie.nl/:path*",
       "statusCode": 301
     }

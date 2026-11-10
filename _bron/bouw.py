@@ -430,7 +430,7 @@ def render(p):
     faq = ''.join(f'<details><summary>{E(q)}</summary><p>{E(a)}</p></details>' for q, a in p['faq'])
     rel = ''.join(f'<a href="/{s}/">{E(NAMES[s][0])}<small>{E(NAMES[s][1])}</small></a>' for s in p['related'])
     title = p.get('title') or f"{name} · Vakreceptie"
-    desc = p['lead'][:155]
+    desc = p['lead'][:155].replace('AI-receptie', 'receptie').replace('AI-assistent', 'assistent')
     buyer = ''
     if p.get('kop') and p.get('opening'):
         buyer = f'''<section class="buyer"><div class="w">
