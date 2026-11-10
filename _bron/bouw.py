@@ -310,8 +310,8 @@ page(slug='groeipakket', groep='Groeidiensten', kick='Groeipakket', h1='Elke maa
 # pakketten
 PK = [
  dict(slug='pakketten/start', key='start', naam='Start', sub='Rustig beginnen', m=79, s=95, aanvr=50,
-      lead="Voor de zzp'er die 's avonds en in het weekend geen appjes meer wil missen. De AI-receptie beantwoordt elke aanvraag en jij krijgt een werkbon.",
-      krijgt=['AI-receptie op je WhatsApp, 24/7', 'Werkbon per aanvraag', 'Spoed herkend, met veiligheidsadvies', "Foto's en spraakberichten", 'Standaard vragenlijst per vak', 'Privacy- en AVG-pakket in jouw naam', 'Support via e-mail', '50 aanvragen per maand'],
+      lead="Voor de zzp'er die 's avonds en in het weekend geen appjes meer wil missen. De receptie beantwoordt elke aanvraag en jij krijgt een werkbon.",
+      krijgt=['Receptie op je WhatsApp, 24/7', 'Werkbon per aanvraag', 'Spoed herkend, met veiligheidsadvies', "Foto's en spraakberichten", 'Standaard vragenlijst per vak', 'Privacy- en AVG-pakket in jouw naam', 'Support via e-mail', '50 aanvragen per maand'],
       niet=['Eigen toon en openingstijden', 'Opvolging en herinneringen'], vb=VB_START, demo='DEMO',
       vbp='Een aanvraag van een (verzonnen) klant en de werkbon die jij krijgt.'),
  dict(slug='pakketten/basis', key='basis', naam='Basis', sub='De receptie', m=99, s=195, aanvr=200,
