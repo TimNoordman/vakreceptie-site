@@ -12,6 +12,17 @@
       "statusCode": 301
     },
     {
+      "source": "/:path*/",
+      "has": [
+        {
+          "type": "host",
+          "value": "vakreceptie-site.vercel.app"
+        }
+      ],
+      "destination": "https://vakreceptie.nl/:path*/",
+      "statusCode": 301
+    },
+    {
       "source": "/:path*",
       "has": [
         {
