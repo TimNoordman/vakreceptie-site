@@ -232,18 +232,71 @@ footer .w{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between
 .nav-toggle{display:none;margin-left:auto;width:44px;height:44px;padding:0;border:2px solid var(--ink);background:transparent;border-radius:10px;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;flex-shrink:0}
 .nav-toggle span{display:block;width:18px;height:2px;background:var(--ink)}
 @media (max-width:560px){nav .nav-toggle{display:inline-flex}nav .w{flex-wrap:wrap}nav.is-open .navlink{display:block}nav.is-open .btn{display:inline-flex}nav.is-open .navlink,nav.is-open .btn{flex:1 0 100%;width:100%;box-sizing:border-box}}
-.hero{display:block;max-width:none}
 .copy p+p{margin-top:14px}
 main h2{margin-bottom:14px}
 .ai-line{font-weight:700}
-#prijs .ctas,#demo-cta .ctas{margin-top:22px}
-.demo-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,380px);gap:28px 40px;align-items:center}
-.demo-after{grid-column:1/-1}
 #groei{padding-block:8px 56px}
 #groei a{color:var(--accent);font-weight:700}
+main{overflow-x:clip}
+.hero-stage{position:relative;background:
+  radial-gradient(ellipse 42% 70% at 86% 42%, color-mix(in srgb,var(--accent) 28%,transparent), transparent 68%)}
+.hero>div{min-width:0}
+.hero-phone{position:relative;justify-self:center;width:min(100%,380px);padding-top:18px}
+.hero-phone .phone{position:relative;z-index:1;animation:phoneIn .7s cubic-bezier(.16,.84,.32,1) both}
+.hero-phone::before{content:"";position:absolute;z-index:0;left:7%;right:4%;top:34px;bottom:28px;background:var(--accent);border-radius:42px;transform:rotate(5deg)}
+.cue{position:absolute;z-index:2;top:0;right:0;margin:0;background:#141C24;color:#fff;border-radius:999px;padding:7px 12px 7px 10px;display:flex;align-items:baseline;gap:8px;box-shadow:4px 4px 0 var(--accent);font-family:var(--display);font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:15px}
+.cue b{color:var(--accent);font-size:22px;font-weight:800;letter-spacing:0}
+.does-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.does-grid p{background:var(--paper);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:14px;padding:18px 18px 18px 16px}
+.ai-line{margin-top:16px;padding:12px 16px;border-radius:12px;background:#141C24;color:#fff;display:inline-block;box-shadow:5px 5px 0 var(--accent)}
+.join-sec{padding-block:20px 36px}
+.join{background:#141C24;color:#ECEFF1;border-radius:28px;padding:clamp(22px,4vw,46px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:32px;align-items:center;box-shadow:0 0 0 3px var(--accent),0 28px 50px -32px rgba(20,28,36,.65)}
+.join h2{color:#fff;margin:10px 0 0}
+.join h2 span{color:var(--accent)}
+.badge-wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
+.badge{background:#fff;color:#14213d;border:4px solid #E8590C;border-radius:24px;padding:22px 26px 24px;width:min(100%,400px);box-shadow:0 18px 40px rgba(0,0,0,.28);animation:badgeFloat 5.5s ease-in-out infinite}
+.shield{width:54px;height:54px;display:block;margin-bottom:8px}
+.badge .k{font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b8440a}
+.badge .name{font-family:var(--display);font-size:clamp(38px,5.4vw,56px);font-weight:800;line-height:.95;margin:2px 0 8px}
+.badge .name i{font-style:normal;color:#E8590C}
+.badge .sub{font-size:16.5px;font-weight:600;color:#3d4760}
+.badge-note{font-size:14px;line-height:1.4;color:#c5ced6;max-width:34ch;text-align:center}
+.join .btn{margin-top:18px}
+.bonsec{padding-block:36px 56px}
+.bonwrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:46px;align-items:center}
+.bon-visual{order:-1}
+.ticket{background:#fff;color:#141C24;border-radius:6px;padding:22px 22px 24px;position:relative;font-size:15.5px;margin:18px 12px 40px;border-left:8px solid #E8590C;box-shadow:0 22px 44px -18px rgba(20,28,36,.55),12px 14px 0 color-mix(in srgb,var(--accent) 35%,transparent);transform:rotate(-2.6deg);animation:ticketIn .8s cubic-bezier(.16,.84,.32,1) both}
+.ticket::before{content:"";position:absolute;left:0;right:0;top:-8px;height:8px;background:radial-gradient(circle at 6px 0,transparent 6px,#fff 6.5px) 0 0/12px 8px repeat-x}
+.ticket header{display:flex;justify-content:space-between;align-items:center;border-bottom:2px dashed #D3D8D8;padding-bottom:10px;margin-bottom:12px}
+.ticket header b{font-family:var(--display);font-size:28px;text-transform:uppercase;letter-spacing:.02em}
+.stamp{font-family:var(--display);font-weight:800;color:#E8590C;border:3px solid #E8590C;border-radius:6px;padding:2px 8px 0;transform:rotate(-8deg);font-size:20px;letter-spacing:.08em;line-height:1.1}
+.ticket dl{display:grid;grid-template-columns:108px minmax(0,1fr);gap:7px 12px;margin:0}
+.ticket dt{color:#56616B;font-weight:700}
+.ticket dd{margin:0}
+.ticket .tip{margin-top:14px;background:#FDE6D8;color:#141C24;border-radius:8px;padding:10px 12px;font-size:14.5px}
+.when{font-family:var(--display);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-size:15px;margin-bottom:8px}
+.caption{position:relative;z-index:1;margin-top:0;font-size:14px;color:var(--muted)}
+.checks{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.checks li{display:flex;gap:10px;align-items:flex-start}
+.checks li::before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:6px;background:#E8590C url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/15px no-repeat}
+.steps-sec{background:var(--accentSoft)}
+.step{box-shadow:0 1px 0 rgba(20,28,36,.04)}
+.cost{background:var(--paper);color:var(--ink);border:3px solid var(--ink);border-radius:20px;padding:28px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;box-shadow:10px 10px 0 var(--accent)}
+.amount{font-family:var(--display);font-weight:800;font-size:clamp(52px,7vw,80px);line-height:.9;letter-spacing:-.01em;margin:0 0 12px;text-transform:uppercase}
+.cost p+p{margin-top:12px}
+.cost-side{display:flex;align-items:center}
+.try{background:#141C24;color:#ECEFF1}
+.try .lead{color:color-mix(in srgb,#fff 78%,transparent)}
+.try .btn.ghost{color:#fff;border-color:#fff;background:transparent}
+.try .ctas{margin-top:22px}
+@keyframes phoneIn{from{transform:translateY(16px)}to{transform:none}}
+@keyframes ticketIn{from{transform:translateY(18px) rotate(-6deg)}to{transform:translateY(0) rotate(-2.6deg)}}
+@keyframes badgeFloat{0%,100%{transform:rotate(-2.4deg) translateY(0)}50%{transform:rotate(-1deg) translateY(-8px)}}
 @media (max-width:900px){
-  .demo-grid{grid-template-columns:minmax(0,1fr)}
-  .phone{order:0}
+  .does-grid,.join,.bonwrap,.cost{grid-template-columns:minmax(0,1fr)}
+  .bon-visual{order:0}
+  .ticket{justify-self:center;width:min(100%,520px)}
+  .cost-side .btn{width:100%}
 }
 @media (max-width:560px){
   .navlink{display:none}
@@ -251,6 +304,21 @@ main h2{margin-bottom:14px}
   .ctas .btn{width:100%}
   main section{padding-block:36px}
   #groei{padding-block:4px 40px}
+  .hero-phone::before{left:10%;right:8%;bottom:36px}
+  .cue{right:4px}
+  .ticket{animation-name:ticketInFlat;margin-inline:4px}
+  .badge{animation:none;transform:none}
+  .join{border-radius:20px;padding:20px 16px}
+  .cost{padding:20px 16px;box-shadow:6px 6px 0 var(--accent)}
+}
+@keyframes ticketInFlat{from{transform:translateY(14px) rotate(-3deg)}to{transform:rotate(-1.2deg)}}
+@media (prefers-reduced-motion:reduce){
+  .m,.typing i,.hero-phone .phone,.ticket,.badge{animation:none!important}
+  .ticket{transform:rotate(-2.6deg)}
+  .badge{transform:rotate(-2deg)}
+}
+@media (max-width:560px) and (prefers-reduced-motion:reduce){
+  .ticket,.badge{transform:none}
 }
 </style>
 <script src="/stacks/site-nav.js" defer></script></head>
@@ -266,25 +334,90 @@ main h2{margin-bottom:14px}
 </div></nav>
 
 <main lang="nl">
-<div class="w">
+<div class="hero-stage"><div class="w">
   <div class="hero">
-    <div class="kick">Voor installateurs, dakdekkers, aannemers en elektriciens</div>
-    <h1>Je klant appt. <span>Vakreceptie antwoordt.</span></h1>
-    <p class="lead">Een assistent op WhatsApp antwoordt namens jou binnen een minuut, ook 's avonds en in het weekend.</p>
-    <div class="ctas">
-      <a class="btn acc" href="#demo" data-wa="AANMELDEN" target="_blank" rel="noopener">Probeer 24 uur gratis</a>
+    <div>
+      <div class="kick">Voor installateurs, dakdekkers, aannemers en elektriciens</div>
+      <h1>Je klant appt. <span>Vakreceptie antwoordt.</span></h1>
+      <p class="lead">Een assistent op WhatsApp antwoordt namens jou binnen een minuut, ook 's avonds en in het weekend.</p>
+      <div class="ctas">
+        <a class="btn acc" href="#demo" data-wa="AANMELDEN" target="_blank" rel="noopener">Probeer 24 uur gratis</a>
+        <a class="btn ghost" href="#demo" data-wa="DEMO" target="_blank" rel="noopener">Eerst de demo zien</a>
+      </div>
+    </div>
+    <div class="hero-phone">
+      <p class="cue"><b>21:47</b> zaterdag</p>
+      <div class="phone" aria-label="Voorbeeldgesprek met de assistent">
+        <div class="screen">
+          <div class="bar"><span class="av">VD</span><div><b>Vakbedrijf Demo</b><small>Assistent · reageert direct</small></div></div>
+          <div class="msgs" id="msgs" aria-live="polite"></div>
+        </div>
+      </div>
+      <button class="replay" id="replay" type="button">Gesprek opnieuw afspelen</button>
     </div>
   </div>
-</div>
+</div></div>
 
-<section><div class="w copy">
+<section><div class="w">
   <h2>Wat het doet</h2>
-  <p>Hij stelt de vragen die jij ook zou stellen. Jij krijgt een complete werkbon op je eigen WhatsApp. Jij belt alleen nog terug.</p>
-  <p>Hij noemt geen prijzen en doet geen beloftes. Jij ziet elk gesprek en kunt het overnemen.</p>
+  <div class="does-grid">
+    <p>Hij stelt de vragen die jij ook zou stellen. Jij krijgt een complete werkbon op je eigen WhatsApp. Jij belt alleen nog terug.</p>
+    <p>Hij noemt geen prijzen en doet geen beloftes. Jij ziet elk gesprek en kunt het overnemen.</p>
+  </div>
   <p class="ai-line">Hij zegt eerlijk dat hij een AI-assistent is.</p>
 </div></section>
 
-<section><div class="w">
+<section class="join-sec"><div class="w">
+  <div class="join">
+    <div>
+      <div class="kick">Aangesloten bij Vakreceptie</div>
+      <h2>Eén aansluiting.<br><span>Alles geregeld.</span></h2>
+      <ul class="checks">
+        <li>Dag en nacht op WhatsApp</li>
+        <li>Schildje voor site, bus en offertes</li>
+        <li>Offerte in één bericht</li>
+        <li>Papierwerk op jouw naam</li>
+      </ul>
+      <a class="btn acc" href="#demo" data-wa="AANMELDEN" target="_blank" rel="noopener">Sluit je aan</a>
+    </div>
+    <div class="badge-wrap">
+      <div class="badge">
+        <svg class="shield" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4l22 8v18c0 14-9.2 24-22 28C19.2 54 10 44 10 30V12z" fill="#E8590C"/><path d="M22 33.5l7 7 14-16" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="k">Aangesloten bij</div>
+        <div class="name">Vak<i>R</i>eceptie</div>
+        <div class="sub">Dag en nacht bereikbaar via WhatsApp</div>
+      </div>
+      <p class="badge-note">Geen keurmerk voor je werk.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="bonsec"><div class="w bonwrap">
+  <div>
+    <p class="when">21:47 · zaterdag</p>
+    <h2>Geen "kunt u even terugbellen" meer</h2>
+    <ul class="checks">
+      <li>Binnen een minuut antwoord</li>
+      <li>Spoed bovenaan, jij belt terug</li>
+      <li>Geen prijs zonder jou</li>
+    </ul>
+  </div>
+  <div class="bon-visual">
+    <div class="ticket" aria-label="Voorbeeld werkbon">
+      <header><b>Werkbon</b><span class="stamp">SPOED</span></header>
+      <dl>
+        <dt>Klant</dt><dd>Sanne Bakker, Amersfoort</dd>
+        <dt>Klus</dt><dd>Lekkage dakrand, plat dak</dd>
+        <dt>Details</dt><dd>Bitumen, 40 m², druppelt nog</dd>
+        <dt>Moment</dt><dd>Zaterdag 21:47</dd>
+      </dl>
+      <div class="tip">Jij stond op het dak.</div>
+    </div>
+    <p class="caption">Verzonnen voorbeeld.</p>
+  </div>
+</div></section>
+
+<section class="steps-sec"><div class="w">
   <h2>Hoe het werkt</h2>
   <div class="steps">
     <div class="step"><span class="n">1</span><h3>Je klant appt je zakelijke nummer.</h3><p>Ook om 21:47, op zaterdag of terwijl jij op een dak staat.</p></div>
@@ -293,30 +426,26 @@ main h2{margin-bottom:14px}
   </div>
 </div></section>
 
-<section id="prijs"><div class="w copy">
-  <h2>Wat het kost</h2>
-  <p>Vanaf € 79 per maand, excl. btw. Eenmalig instellen vanaf € 95. Maandelijks opzegbaar, geen jaarcontract.</p>
-  <p>Start probeer je eerst 24 uur gratis. Bij Start staat je receptie in twee minuten aan. Bij de andere pakketten staat hij binnen 48 uur live.</p>
-  <p>Alle prijzen zijn vanafprijzen per maand, voor één vestiging.</p>
-  <div class="ctas"><a class="btn acc" href="/pakketten/">Bekijk de pakketten</a></div>
+<section id="prijs"><div class="w">
+  <div class="cost">
+    <div>
+      <h2>Wat het kost</h2>
+      <p class="amount">Vanaf € 79</p>
+      <p>per maand, excl. btw. Eenmalig instellen vanaf € 95. Maandelijks opzegbaar, geen jaarcontract.</p>
+      <p>Start probeer je eerst 24 uur gratis. Bij Start staat je receptie in twee minuten aan. Bij de andere pakketten staat hij binnen 48 uur live.</p>
+      <p>Alle prijzen zijn vanafprijzen per maand, voor één vestiging.</p>
+    </div>
+    <div class="cost-side"><a class="btn acc" href="/pakketten/">Bekijk de pakketten</a></div>
+  </div>
 </div></section>
 
-<section id="demo-cta"><div class="w demo-grid">
-  <div class="copy">
-    <h2>Probeer het zelf in twee minuten</h2>
-    <p class="lead">Tik op de knop en doe alsof je een klant bent met een kapotte ketel of een lekkend dak.</p>
-    <div class="ctas"><a class="btn acc" href="#demo" data-wa="DEMO" target="_blank" rel="noopener">Start de demo op WhatsApp</a></div>
+<section id="demo-cta" class="try"><div class="w">
+  <h2>Probeer het zelf in twee minuten</h2>
+  <p class="lead">Tik op de knop en doe alsof je een klant bent met een kapotte ketel of een lekkend dak.</p>
+  <div class="ctas">
+    <a class="btn acc" href="#demo" data-wa="DEMO" target="_blank" rel="noopener">Start de demo op WhatsApp</a>
+    <a class="btn ghost" href="#demo" data-wa="AANMELDEN" target="_blank" rel="noopener">Of probeer 24 uur gratis voor je eigen bedrijf</a>
   </div>
-  <div>
-      <div class="phone" aria-label="Voorbeeldgesprek met de assistent">
-        <div class="screen">
-          <div class="bar"><span class="av">VD</span><div><b>Vakbedrijf Demo</b><small>Assistent · reageert direct</small></div></div>
-          <div class="msgs" id="msgs" aria-live="polite"></div>
-        </div>
-      </div>
-      <button class="replay" id="replay" type="button">Gesprek opnieuw afspelen</button>
-  </div>
-  <div class="demo-after ctas"><a class="btn ghost" href="#demo" data-wa="AANMELDEN" target="_blank" rel="noopener">Of probeer 24 uur gratis voor je eigen bedrijf</a></div>
 </div></section>
 
 <section id="groei"><div class="w">
