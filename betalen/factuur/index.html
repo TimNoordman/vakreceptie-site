@@ -1,0 +1,63 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Factuur betalen · Vakreceptie</title>
+<link rel="icon" href="/favicon-32.png">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#f3f5f8;color:#172033}
+.kop{background:#141C24;color:#fff;padding:22px 18px 70px}.kop small{opacity:.75;display:block;margin-bottom:4px}.kop h1{margin:0;font-size:20px}
+.kaart{background:#fff;max-width:480px;margin:-52px 12px 0;border-radius:16px;box-shadow:0 8px 30px rgba(20,28,36,.12);padding:22px 18px}
+@media(min-width:504px){.kaart{margin-left:auto;margin-right:auto}}
+.l{font-size:12px;color:#55607a;text-transform:uppercase;letter-spacing:.04em}.w{font-size:17px;font-weight:600;word-break:break-all}
+.bedrag{font-size:38px;font-weight:800;margin:2px 0 4px}.sub{color:#55607a;font-size:14px;margin-bottom:16px}
+.rij{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid #e6e9ef;padding:12px 0}
+button,.knop{font:inherit;border:0;border-radius:10px;cursor:pointer}
+.rij button{background:#eef1f6;color:#172033;padding:9px 12px;font-size:14px;font-weight:600;white-space:nowrap}
+.alles{display:block;width:100%;background:#E8590C;color:#fff;padding:15px;font-size:17px;font-weight:700;margin-top:14px}
+.knop{display:block;text-align:center;text-decoration:none;background:#141C24;color:#fff;padding:15px;font-size:17px;font-weight:700;margin-top:10px}
+.tip{font-size:13px;color:#55607a;margin-top:8px;text-align:center}
+.ok{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#172033;color:#fff;padding:10px 16px;border-radius:999px;font-size:14px;opacity:0;transition:opacity .2s}
+.voet{max-width:480px;margin:22px auto 30px;text-align:center;font-size:13px;color:#55607a;padding:0 16px}.voet a{color:#55607a}
+</style></head><body>
+<div class="kop"><small id="kn">Factuur</small><h1>Vakreceptie</h1></div>
+<div class="kaart" id="kaart">
+<div class="l">Te betalen</div><div class="bedrag" id="bedrag">Zie uw factuur</div>
+<div class="sub">Vermeld altijd het factuurnummer.</div>
+<div id="rijen"></div>
+<button class="alles" id="alles">Kopieer alle gegevens</button>
+<div id="link"></div>
+</div>
+<div class="voet">Vragen over uw factuur? Mail <a href="mailto:info@vakreceptie.nl">info@vakreceptie.nl</a> · <a href="/">vakreceptie.nl</a></div>
+<div class="ok" id="ok">Gekopieerd</div>
+<script>
+(function(){
+  // Vaste gegevens van Vakreceptie. BETAALLINK invullen zodra er een vaste betaallink is.
+  var IBAN = 'NL57 INGB 0107 2264 80', NAAM = 'Stone Member B.V.', BETAALLINK = '';
+  var q = new URLSearchParams(location.search);
+  var nr = /^(VR|VC)-\d{4}-\d{4}$/.test(q.get('n') || '') ? q.get('n') : '';
+  var b = /^\d{1,6}(\.\d{1,2})?$/.test(q.get('b') || '') ? Number(q.get('b')) : 0;
+  var kaal = b ? b.toFixed(2).replace('.', ',') : '';
+  var mooi = b ? '€ ' + kaal.replace(/\B(?=(\d{3})+(?!\d))/g, '.') : '';
+  if (nr) document.getElementById('kn').textContent = 'Factuur ' + nr;
+  if (mooi) document.getElementById('bedrag').textContent = mooi;
+  var rijen = [];
+  if (mooi) rijen.push(['Bedrag', mooi, kaal]);
+  rijen.push(['IBAN', IBAN, IBAN.replace(/\s/g, '')], ['Ten name van', NAAM, NAAM]);
+  if (nr) rijen.push(['Omschrijving', nr, nr]);
+  var doel = document.getElementById('rijen');
+  rijen.forEach(function (r) {
+    var d = document.createElement('div'); d.className = 'rij';
+    var t = document.createElement('div'), l = document.createElement('div'), w = document.createElement('div');
+    l.className = 'l'; l.textContent = r[0]; w.className = 'w'; w.textContent = r[1]; t.appendChild(l); t.appendChild(w);
+    var k = document.createElement('button'); k.textContent = 'Kopieer'; k.setAttribute('data-k', r[2]);
+    d.appendChild(t); d.appendChild(k); doel.appendChild(d);
+  });
+  var alles = [kaal && 'Bedrag: ' + kaal, 'IBAN: ' + IBAN.replace(/\s/g, ''), 'Ten name van: ' + NAAM, nr && 'Omschrijving: ' + nr].filter(Boolean).join('\n');
+  document.getElementById('alles').setAttribute('data-k', alles);
+  if (BETAALLINK) document.getElementById('link').innerHTML = '<a class="knop" rel="noopener" href="' + BETAALLINK + '">Direct betalen</a><div class="tip">Vul daar het bedrag in en zet het factuurnummer bij de omschrijving.</div>';
+  function oud(t){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}
+  document.querySelectorAll('[data-k]').forEach(function (x) { x.addEventListener('click', function () {
+    var t = x.getAttribute('data-k'), ok = document.getElementById('ok');
+    function klaar(){ok.style.opacity=1;setTimeout(function(){ok.style.opacity=0},1400)}
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(klaar, function(){oud(t);klaar()}); else { oud(t); klaar(); }
+  }); });
+})();
+</script></body></html>
