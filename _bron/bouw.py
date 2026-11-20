@@ -364,7 +364,7 @@ def nav():
 FOOT = '''<footer><div class="w">
   <span class="flogo"><img class="lg-l" src="/assets/logo-licht.png" alt="Vakreceptie" width="164" height="44"><img class="lg-d" src="/assets/logo-donker.png" alt="Vakreceptie" width="164" height="44"></span>
   <span style="user-select:all">info@vakreceptie.nl</span>
-  <span style="flex-basis:100%;font-size:14px">Stone Member B.V. · Grote Markt 38, 1315 JG Almere · KvK 86739395 · btw NL864070810B01</span>
+  <span style="flex-basis:100%;font-size:14px">Vakreceptie · Grote Markt 38, 1315 JG Almere · KvK 86739395 · btw NL864070810B01</span>
 </div></footer>'''
 
 def head(title, desc, path):
