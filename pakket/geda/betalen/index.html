@@ -1,0 +1,41 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Betalen: factuur VOORBEELD van GEDA Werken</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#f3f5f8;color:#172033}
+.kop{background:#172e49;color:#fff;padding:22px 18px 70px}.kop small{opacity:.75;display:block;margin-bottom:4px}.kop h1{margin:0;font-size:20px}
+.kaart{background:#fff;max-width:480px;margin:-52px auto 0;border-radius:16px;box-shadow:0 8px 30px rgba(20,28,36,.12);padding:22px 18px;margin-left:12px;margin-right:12px}
+@media(min-width:504px){.kaart{margin-left:auto;margin-right:auto}}
+.bedrag{font-size:38px;font-weight:800;margin:2px 0 4px}.sub{color:#55607a;font-size:14px;margin-bottom:16px}
+.rij{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid #e6e9ef;padding:12px 0}
+.l{font-size:12px;color:#55607a;text-transform:uppercase;letter-spacing:.04em}.w{font-size:17px;font-weight:600;word-break:break-all}
+button,.knop{font:inherit;border:0;border-radius:10px;cursor:pointer}
+.rij button{background:#eef1f6;color:#172033;padding:9px 12px;font-size:14px;font-weight:600;white-space:nowrap}
+.alles{display:block;width:100%;background:#2364e7;color:#fff;padding:15px;font-size:17px;font-weight:700;margin-top:14px}
+.knop{display:block;text-align:center;text-decoration:none;background:#172e49;color:#fff;padding:15px;font-size:17px;font-weight:700;margin-top:10px}
+.tip{font-size:13px;color:#55607a;margin-top:8px;text-align:center}.pdf{display:block;text-align:center;margin-top:16px;color:#2364e7;font-weight:600}
+.ok{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#172033;color:#fff;padding:10px 16px;border-radius:999px;font-size:14px;opacity:0;transition:opacity .2s}
+.voet{max-width:480px;margin:22px auto 30px;text-align:center;font-size:13px;color:#55607a;padding:0 16px}.voet a{color:#55607a}
+</style></head><body>
+<div class="kop"><small>Factuur VOORBEELD</small><h1>GEDA Werken</h1></div>
+<div class="kaart">
+<div class="sub" style="background:#fff4e5;border-radius:10px;padding:10px 12px;color:#7a4300"><b>Voorbeeld.</b> Zo zien jouw klanten de betaalpagina als ze de QR-code op je factuur scannen. Op je echte facturen staan hier je eigen bedrag, IBAN en factuurnummer.</div>
+<div class="l">Te betalen</div><div class="bedrag">€ 344,85</div>
+<div class="sub">Graag uiterlijk 23 november 2026</div>
+<div class="rij"><div><div class="l">Bedrag</div><div class="w">€ 344,85</div></div><button data-k="344,85">Kopieer</button></div>
+
+<div class="rij"><div><div class="l">Ten name van</div><div class="w">GEDA Werken</div></div><button data-k="GEDA Werken">Kopieer</button></div>
+<div class="rij"><div><div class="l">Omschrijving</div><div class="w">VOORBEELD</div></div><button data-k="VOORBEELD">Kopieer</button></div>
+<button class="alles" data-k="Bedrag: 344,85
+Ten name van: GEDA Werken
+Omschrijving: VOORBEELD">Kopieer alle gegevens</button>
+
+<a class="pdf" href="../voorbeeldfactuur.pdf">Factuur bekijken (pdf)</a>
+</div>
+<div class="voet">Deze factuur is gemaakt via WhatsApp met Vakreceptie. Ook zo makkelijk factureren? <a href="https://vakreceptie.nl/">vakreceptie.nl</a></div>
+<div class="ok" id="ok">Gekopieerd</div>
+<script>
+document.querySelectorAll('[data-k]').forEach(function(b){b.addEventListener('click',function(){var t=b.getAttribute('data-k'),ok=document.getElementById('ok');
+function klaar(){ok.style.opacity=1;setTimeout(function(){ok.style.opacity=0},1400)}
+if(navigator.clipboard){navigator.clipboard.writeText(t).then(klaar,function(){oud(t);klaar()})}else{oud(t);klaar()}})});
+function oud(t){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}
+</script></body></html>
