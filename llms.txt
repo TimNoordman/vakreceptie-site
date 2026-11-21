@@ -4,6 +4,8 @@
 
 Vakreceptie is geen telefoonservice, geen bezoekersregistratie en geen therapie of zorgdienst. Website: https://vakreceptie.nl/ · Contact: info@vakreceptie.nl
 
+De naam wordt ook geschreven als VakReceptie of Vak receptie. Vakreceptie is een WhatsApp-receptie voor vakbedrijven (niet te verwarren met bakrecepten).
+
 ## Pakketten (prijzen per maand, excl. btw, maandelijks opzegbaar)
 
 - [Pakket Start](https://vakreceptie.nl/pakketten/start/): € 79 per maand + € 95 eenmalig instellen, 50 aanvragen per maand. Voor de zzp'er die 's avonds en in het weekend geen appjes meer wil missen.
@@ -24,6 +26,8 @@ Vakreceptie is geen telefoonservice, geen bezoekersregistratie en geen therapie 
 
 ## Meer
 
+- [Pakketten en prijzen](https://vakreceptie.nl/pakketten/): alle pakketten naast elkaar.
+- [Alles van Vakreceptie](https://vakreceptie.nl/alles/): alle onderdelen op één pagina.
 - [Tools per vak, met bron](https://vakreceptie.nl/stacks/): welke software vakbedrijven naast elkaar gebruiken voor werkbon, planning en boekhouding, elke stack met openbare bron.
 - [Meerwerkregister](https://meerwerk.vakreceptie.nl/): module voor wijzigingen op lopende bouwprojecten, met prijs, opslag en akkoord via WhatsApp.
 - [Algemene voorwaarden](https://vakreceptie.nl/algemene-voorwaarden/)
