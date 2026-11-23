@@ -28,6 +28,7 @@ De naam wordt ook geschreven als VakReceptie of Vak receptie. Vakreceptie is een
 
 - [Pakketten en prijzen](https://vakreceptie.nl/pakketten/): alle pakketten naast elkaar.
 - [Alles van Vakreceptie](https://vakreceptie.nl/alles/): alle onderdelen op één pagina.
+- [Telefoonservice of chatbot voor je bedrijf?](https://vakreceptie.nl/telefoonservice-of-chatbot/): Vakreceptie is een WhatsApp-assistent op je eigen zakelijke nummer, geen telefoonservice. Bellen je klanten vooral, dan past een telefoonservice beter.
 - [Tools per vak, met bron](https://vakreceptie.nl/stacks/): welke software vakbedrijven naast elkaar gebruiken voor werkbon, planning en boekhouding, elke stack met openbare bron.
 - [Meerwerkregister](https://meerwerk.vakreceptie.nl/): module voor wijzigingen op lopende bouwprojecten, met prijs, opslag en akkoord via WhatsApp.
 - [Algemene voorwaarden](https://vakreceptie.nl/algemene-voorwaarden/)
